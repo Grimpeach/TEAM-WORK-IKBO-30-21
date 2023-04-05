@@ -11,10 +11,14 @@
 
 	--border-radius: 3px;
 	--linear-gradient: linear-gradient(to right, #c9548e, #bc3e7e, rgba(187, 62, 126, 0.78), rgba(217, 141, 177, 0.69));
-	--box-shadow: 
+	--box-shadow:
 		0 16px 24px 2px rgb(187, 62, 126),
 		0 6px 30px 5px rgb(0, 0, 0),
 		0 8px 10px -5px rgba(0, 0, 0, 0.1);
+}
+
+.subjects a{
+	color: var(--white);
 }
 
 * {
@@ -24,3 +28,103 @@
 ::-webkit-scrollbar {
 	width: 8px;
 }
+
+/* posts table's head  */
+.table-head{
+	display: flex;
+}
+
+.table-head div{
+	padding: 5px;
+	margin: 2px;
+	background-color: rgba(44, 44, 44, 0.26);
+	font-weight: bold;
+}
+
+.table-head .status{
+	flex: 5%;
+}
+
+.table-head .subjects{
+	flex: 70%;
+}
+
+.table-head .replies{
+	flex: 10%;
+}
+
+.table-head .last-reply{
+	flex: 15%;
+}
+
+/* posts table's body  */
+
+.table-row{
+	display: flex;
+}
+
+.table-row .status, .table-row .subjects, .table-row .replies, .table-row .last-reply{
+	padding: 5px;
+	margin: 2px;
+	background-color: rgba(19, 20, 21, 0.5);
+}
+
+.table-row .status{
+	flex: 5%;
+	font-size: 30px;
+	text-align: center;
+}
+
+.table-row .subjects{
+	flex: 70%;
+}
+
+.table-row .replies{
+	flex: 10%;
+}
+
+.table-row .last-reply{
+	flex: 15%;
+}
+
+/* navigation path*/
+.navigate{
+	margin-block: 20px;
+	font-weight: lighter;
+	font-size: 24px;
+}
+
+.navigate a{
+	color: #a83a3a;
+}
+
+
+/* Pagination*/
+
+.pagination{
+	padding: 20px;
+	font-size: 15px;
+}
+
+.pagination a{
+	color: #fff;
+	margin-inline: 5px;
+	padding: 5px 10px;
+	border: solid 0.5px #fff;
+}
+
+.pagination a:hover{
+	opacity: 0.5;
+}
+
+.note{
+	background-color:#111314;
+	padding: 20px;
+	display: block;
+}
+
+.note span{
+	font-size: 20px;
+	margin-block: 5px;
+}
+
