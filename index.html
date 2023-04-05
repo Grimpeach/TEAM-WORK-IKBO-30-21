@@ -1,79 +1,130 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>booker</title>
-    <link rel="icon" type="image/png" href="fav.png">
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-    <nav class="nav">
-        <div class="container">
-            <div class="nav-row">
-                <a href="./index.html" class="logo"><strong>Книга</strong> без имени</a>
+:root {
+	--color-light: #3c3f41;
+	--color-dark: #a1a1a1;
+	--color-unaccent: #808080;
+	--color-error-light: #f26b6b;
+	--color-error-dark: #d65c5c;
 
-                <button class="dark-mode-btn">
-                    <img src="./img/icons/sun.svg" alt="Light mode" class="dark-mode-btn__icon">
-                    <img src="./img/icons/moon.svg" alt="Dark mode" class="dark-mode-btn__icon">
-                </button>
+	--spacing-small: 10px;
+	--spacing-medium: 15px;
+	--spacing-large: 30px;
 
-                <ul class="nav-list">
-                    <li class="nav-list__item"><a href="./index.html" class="nav-list__link nav-list__link--active">Домик</a></li>
-                    <li class="nav-list__item"><a href="./skills.html" class="nav-list__link">Форум</a></li>
-                    <li class="nav-list__item"><a href="./galerey.html" class="nav-list__link">Топы месяца</a></li>
-                    <li class="nav-list__item"><a href="./contacts.html" class="nav-list__link">Контакты</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+	--border-radius: 3px;
+	--linear-gradient: linear-gradient(to right, #c9548e, #bc3e7e, rgba(187, 62, 126, 0.78), rgba(217, 141, 177, 0.69));
+	--box-shadow:
+		0 16px 24px 2px rgb(187, 62, 126),
+		0 6px 30px 5px rgb(0, 0, 0),
+		0 8px 10px -5px rgba(0, 0, 0, 0.1);
+}
 
-    <header class="header">
-        <div class="header__wrapper">
-            <h1 class="header__title">
-                <strong><em>погрузитесь в захватывающие тайтлы этого сезона</em></strong><br>
-            </h1>
-            <a href="https://www.donationalerts.com/r/grim_peach" class="btn">помочь авторам</a>
-        </div>
-    </header>
+.subjects a{
+	color: var(--white);
+}
 
-    <main class="section">
-        <div class="container">
-            <h2 class="title-1">Новости</h2>
-            <ul class="projects">
-                <li class="project">
-                    <a href="./project-page.html">
-                        <img src="./img/projects/01.jpg" alt="Project img" class="project__img">
-                        <h3 class="project__title">???</h3>
-                    </a>
-                </li>
-                <li class="project">
-                    <a href="./project-page.html">
-                        <img src="./img/projects/01.jpg" alt="Project img" class="project__img">
-                        <h3 class="project__title">???</h3>
-                    </a>
-                </li>
-                <li class="project">
-                    <a href="./project-page.html">
-                        <img src="./img/projects/01.jpg" alt="Project img" class="project__img">
-                        <h3 class="project__title">???</h3>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </main>
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__wrapper">
-                <ul class="social">
-                    <li class="social__item"><a href="https://github.com/Grimpeach"><img src="./img/icons/gitHub.svg" alt="Link"></a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+* {
+	box-sizing: border-box;
+}
 
-    <script src="./js/main.js"></script>
+::-webkit-scrollbar {
+	width: 8px;
+}
 
-</body>
-</html>
+/* posts table's head  */
+.table-head{
+	display: flex;
+}
+
+.table-head div{
+	padding: 5px;
+	margin: 2px;
+	background-color: rgba(44, 44, 44, 0.26);
+	font-weight: bold;
+}
+
+.table-head .status{
+	flex: 5%;
+}
+
+.table-head .subjects{
+	flex: 70%;
+}
+
+.table-head .replies{
+	flex: 10%;
+}
+
+.table-head .last-reply{
+	flex: 15%;
+}
+
+/* posts table's body  */
+
+.table-row{
+	display: flex;
+}
+
+.table-row .status, .table-row .subjects, .table-row .replies, .table-row .last-reply{
+	padding: 5px;
+	margin: 2px;
+	background-color: rgba(19, 20, 21, 0.5);
+}
+
+.table-row .status{
+	flex: 5%;
+	font-size: 30px;
+	text-align: center;
+}
+
+.table-row .subjects{
+	flex: 70%;
+}
+
+.table-row .replies{
+	flex: 10%;
+}
+
+.table-row .last-reply{
+	flex: 15%;
+}
+
+/* navigation path*/
+.navigate{
+	margin-block: 20px;
+	font-weight: lighter;
+	font-size: 24px;
+}
+
+.navigate a{
+	color: #a83a3a;
+}
+
+
+/* Pagination*/
+
+.pagination{
+	padding: 20px;
+	font-size: 15px;
+}
+
+.pagination a{
+	color: #fff;
+	margin-inline: 5px;
+	padding: 5px 10px;
+	border: solid 0.5px #fff;
+}
+
+.pagination a:hover{
+	opacity: 0.5;
+}
+
+.note{
+	background-color:#111314;
+	padding: 20px;
+	display: block;
+}
+
+.note span{
+	font-size: 20px;
+	margin-block: 5px;
+}
+
